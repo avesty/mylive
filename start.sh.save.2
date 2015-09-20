@@ -1,0 +1,10 @@
+#!/bin/sh
+forever stop 0
+forever start /home/codio/workspace/app.js
+forever start /home/codio/workspace/image.js
+forever start /home/codio/workspaceservice.js
+cd youtube_engine
+cd node-YouTubeStreamer
+forever start youtube_engine.js
+cd ..
+echo 'all done!'
